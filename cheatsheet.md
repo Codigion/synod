@@ -113,28 +113,28 @@ PROJECT_NAME=Project Name
 #### Note: Replace "[DOMAIN OR IP ADDRESS]" with Domain or IP Address.
 ```bash
 server {
-    //Listens on port 80 for HTTP requests and treats this server block as the default server.
+    #Listens on port 80 for HTTP requests and treats this server block as the default server.
     listen 80 default_server;
-    //Specifies the domain name or IP address for which this server block will handle requests.
+    #Specifies the domain name or IP address for which this server block will handle requests.
     server_name [DOMAIN OR IP ADDRESS];
-    //Sets the document root directory to "/var/www/weaver," where web content is served from.
+    #Sets the document root directory to "/var/www/weaver," where web content is served from.
     root /var/www/weaver;
-    //Defines the order in which index files (index.php and index.html) are looked for when accessing a directory.
+    #Defines the order in which index files (index.php and index.html) are looked for when accessing a directory.
     index index.php index.html;
 
-    //Handles requests to the root path ("/") and performs a URL rewrite for friendly URLs.
+    #Handles requests to the root path ("/") and performs a URL rewrite for friendly URLs.
     location / {
         rewrite ^/([^/]+)$ /?url=$1 last;
     }
 
-    //Manages requests for PHP files, passing them to the PHP-FPM server for processing.
+    #Manages requests for PHP files, passing them to the PHP-FPM server for processing.
     location ~ \.php$ {
         include fastcgi_params;
         fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
     }
 
-    //Blocks access to hidden files and folders (those starting with a dot) for security.
+    #Blocks access to hidden files and folders (those starting with a dot) for security.
     location ~ /\. {
         deny all;
     }
