@@ -1,4 +1,4 @@
-# Cheetsheet
+# Cheatsheet
 # Synod College Workshop
 
 ## Server Setup
