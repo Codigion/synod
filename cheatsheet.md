@@ -1,7 +1,3 @@
-Quiz!
-Box Credentials!
-
-
 # Cheetsheet
 # Synod College Workshop
 
