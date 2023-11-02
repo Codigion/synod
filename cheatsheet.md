@@ -151,6 +151,7 @@ server {
 
 
 ## Secure, a little!
+
 //Set the owner and group of the /var/www/weaver directory and its contents to www-data to grant web server permissions
 
 `chown -R www-data:www-data /var/www/weaver`
@@ -158,6 +159,8 @@ server {
 //Change the directory's permissions to 700, which restricts access to only the owner while securing the web application.
 
 `chmod -R 700 /var/www/weaver`
+
+
 
 //Install SSL Certificate
 
