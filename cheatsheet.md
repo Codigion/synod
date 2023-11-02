@@ -162,11 +162,13 @@ server {
 
 
 
+
 //Install SSL Certificate
+In "/etc/nginx/sites-available/weaver" file, replace IP with Sub-Domain Name.
 
 ***certbot --nginx -d [DOMAIN NAME]***
 
 Example: *certbot --nginx -d weaver.codigion.com*
-Note: In "/etc/nginx/sites-available/weaver", replace IP with Sub-Domain Name.
+
 
 
