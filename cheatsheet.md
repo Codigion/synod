@@ -163,7 +163,7 @@ server {
 
 
 
-//Install SSL Certificate
+## Install SSL Certificate
 In "/etc/nginx/sites-available/weaver" file, replace IP with Sub-Domain Name.
 
 ***certbot --nginx -d [DOMAIN NAME]***
